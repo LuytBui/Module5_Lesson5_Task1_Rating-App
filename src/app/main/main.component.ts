@@ -17,27 +17,27 @@ export class MainComponent implements OnInit {
       isActive: false
     },
     {
-      value: 1,
+      value: 2,
       isActive: false
     },
     {
-      value: 1,
+      value: 3,
       isActive: false
     },
     {
-      value: 1,
+      value: 4,
       isActive: false
     },
     {
-      value: 1,
+      value: 5,
       isActive: false
     },
     {
-      value: 1,
+      value: 6,
       isActive: false
     },
     {
-      value: 1,
+      value: 7,
       isActive: false
     },
   ];

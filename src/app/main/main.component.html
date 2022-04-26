@@ -2,6 +2,6 @@
 <p>You rated: {{rateValue}}</p>
 <div class="row">
   <div *ngFor="let item of ratingUnits">
-    <app-rate-button ratingUnit="{{item}}" (clickEvent)="readRating($event)"></app-rate-button>
+    <app-rate-button [ratingUnit]="item" (clickEvent)="readRating($event)"></app-rate-button>
   </div>
 </div>
