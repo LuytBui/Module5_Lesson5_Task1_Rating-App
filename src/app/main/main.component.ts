@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {RatingUnit} from '../rating-unit';
 
 @Component({
   selector: 'app-main',
@@ -7,16 +8,63 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  rateValue: number = 5;
+  rateValue = 5;
+  max = 10;
+
+  ratingUnits: RatingUnit[] = [
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+    {
+      value: 1,
+      isActive: false
+    },
+  ];
 
   readRating(event) {
-    this.rateValue = event;
+    this.rateValue = event.value;
+    for (let i = 0; i < this.ratingUnits.length; i++) {
+      if (i < this.rateValue) {
+        this.ratingUnits[i].isActive = true;
+      } else {
+        this.ratingUnits[i].isActive = false;
+      }
+    }
   }
 
   constructor() {
   }
 
-  ngOnInit() {
+  ngOnInit() {for (let i = 0; i < this.max; i++) {
+    // this.ratingUnits.push(
+    //   {
+    //     value: i + 1,
+    //     isActive: false
+    //   }
+    // );
   }
+  }
+
 
 }

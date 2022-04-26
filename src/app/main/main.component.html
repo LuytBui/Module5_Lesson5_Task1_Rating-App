@@ -1,7 +1,7 @@
 <h1>Rating App</h1>
 <p>You rated: {{rateValue}}</p>
 <div class="row">
-  <div *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10]" >
-    <app-rate-button value="{{number}}" (clickEvent) = "readRating($event)"></app-rate-button>
+  <div *ngFor="let item of ratingUnits">
+    <app-rate-button ratingUnit="{{item}}" (clickEvent)="readRating($event)"></app-rate-button>
   </div>
 </div>

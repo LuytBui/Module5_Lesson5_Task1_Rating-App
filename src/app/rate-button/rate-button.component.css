@@ -2,8 +2,12 @@
   width: 50px;
   height: 50px;
   margin: 6px;
-  background: green;
+  background: gray;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.active {
+  background: mediumblue;
 }

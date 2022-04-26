@@ -1,3 +1,3 @@
-<div class="rate-button" (click)="buttonClick()">
-  <p>{{value}}</p>
+<div class="rate-button"  (click)="buttonClick()" [class.active]="ratingUnit.isActive">
+  <p>{{ratingUnit.value}}</p>
 </div>

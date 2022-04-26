@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {RatingUnit} from '../rating-unit';
 
 @Component({
   selector: 'app-rate-button',
@@ -6,12 +7,12 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./rate-button.component.css']
 })
 export class RateButtonComponent implements OnInit {
-  @Input() value: number;
+  @Input() ratingUnit: RatingUnit;
 
-  @Output() clickEvent: EventEmitter<number> = new EventEmitter<number>();
+  @Output() clickEvent: EventEmitter<RatingUnit> = new EventEmitter<RatingUnit>();
 
   buttonClick() {
-    this.clickEvent.emit(this.value);
+    this.clickEvent.emit(this.ratingUnit);
   }
 
   constructor() {
