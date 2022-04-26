@@ -11,36 +11,7 @@ export class MainComponent implements OnInit {
   rateValue = 5;
   max = 10;
 
-  ratingUnits: RatingUnit[] = [
-    {
-      value: 1,
-      isActive: false
-    },
-    {
-      value: 2,
-      isActive: false
-    },
-    {
-      value: 3,
-      isActive: false
-    },
-    {
-      value: 4,
-      isActive: false
-    },
-    {
-      value: 5,
-      isActive: false
-    },
-    {
-      value: 6,
-      isActive: false
-    },
-    {
-      value: 7,
-      isActive: false
-    },
-  ];
+  ratingUnits: RatingUnit[] = [];
 
   readRating(event) {
     this.rateValue = event.value;
@@ -57,12 +28,12 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {for (let i = 0; i < this.max; i++) {
-    // this.ratingUnits.push(
-    //   {
-    //     value: i + 1,
-    //     isActive: false
-    //   }
-    // );
+    this.ratingUnits.push(
+      {
+        value: i + 1,
+        isActive: false
+      }
+    );
   }
   }
 
